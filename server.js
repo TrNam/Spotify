@@ -9,3 +9,5 @@ hbs.registerPartials(__dirname + '/public/partials');
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
+
+// comment
