@@ -1,0 +1,54 @@
+#login {
+    position:absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    top:0px;
+    margin:auto;
+    width:50%;
+    height:70%;
+    text-align: center;
+}
+
+.userInp {
+    width:30%;
+    height:5%;
+    position:absolute;
+    left:0px;
+    right:0px;
+    margin:auto;
+}
+
+#username {
+    top:40%;
+}
+
+#password {
+    top:50%;
+}
+
+#signupButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#signupButton {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+#signupButton:hover {
+    background-color: #4CAF50;
+    color: white;
+}
