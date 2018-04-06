@@ -2,11 +2,26 @@
 <html>
     <head>
         <title>{{title}}</title>
-        <link href="mytracksStyle.css" rel="stylesheet" type="text/css">
+        <link href="signupStyle.css" rel="stylesheet" type="text/css">
     </head>
     
     <body>
         
+        <form id="signup">
+            <p>Enter your first name</p>
+            <input type="text" placeholder="First Name" required/>
+            <p>Enter your last name</p>
+            <input type="text" placeholder="Last Name" required/>
+            <p>Enter your email address</p>
+            <input type="email" placeholder="eg. whosemans@gmail.com" required/>
+            <p>Enter your password</p>
+            <input type="text" required/>
+            <p>Re-enter your password</p>
+            <input type="text" required/>
+            <p></p>
+            <input id="continueButton" type="button" value="Continue" onclick="window.location.href='/congratulations'"/>
+            
+        </form>
         
         {{> footer}}
     </body>

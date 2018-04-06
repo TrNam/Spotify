@@ -7,12 +7,12 @@
     
     <body>
         
-        <button id="signupButton">Sign up</button>
+        <input id="signupButton" type="button" value="Sign up" onclick="window.location.href='/signup'"/>
         
         <div id="login">
             <h1>User Login</h1>
             <input class="userInp" id="username" type="text" placeholder="Username" required>
-            <input id="password" class="userInp" type="password" placeholder="Password">
+            <input id="password" class="userInp" type="password" placeholder="Password" required>
         </div>
         
         {{> footer}}

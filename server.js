@@ -38,6 +38,12 @@ app.get('/mytracks', (request, response) => {
 	})
 });
 
+app.get('/congratulations', (request, response) => {
+	response.render('congratulations.hbs', {
+		title: 'Congratulations'
+	})
+});
+
 app.listen(port, () => {
 	console.log('Server is up on the port 8080');
 });

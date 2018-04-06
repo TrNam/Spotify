@@ -28,10 +28,11 @@
 }
 
 #signupButton {
-    background-color: #4CAF50;
+    position: absolute;
+    background-color: grey;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 10px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -40,15 +41,17 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
+    right:1%;
+    top:1%;
 }
 
 #signupButton {
     background-color: white; 
     color: black; 
-    border: 2px solid #4CAF50;
+    border: 2px solid grey;
 }
 
 #signupButton:hover {
-    background-color: #4CAF50;
+    background-color: grey;
     color: white;
 }
