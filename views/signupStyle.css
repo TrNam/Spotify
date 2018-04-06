@@ -1,14 +1,12 @@
 #signup {
     position:absolute;
-    left:0px;
-    right:0px;
+    right:38%;
     bottom:0px;
     top:0px;
     margin:auto;
-    width:50%;
-    height:70%;
-    text-align: center;
-    display: inline-block;
+    width:25%;
+    height:50%;
+    text-align: left;
 }
 
 #continueButton {
@@ -16,13 +14,15 @@
     border: none;
     color: white;
     padding: 5px 60px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
+    right:0px;
+    left:0px;
+    margin:auto;
+    position:absolute;
+    bottom:10%;
 }
 
 #continueButton {
