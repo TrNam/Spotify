@@ -4,13 +4,14 @@ const hbs = require('hbs');
 const fs = require('fs');
 const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
+const todo = require('./todo.js');
 
 var app = express();
 
-// app.use(bodyParser); 
-// app.use(bodyParser.urlencoded({    
-//   extended: true
-// })); 
+var accounts = [];
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true })) 
 
 // app.use(express.json());
 // app.use(express.urlencoded());
@@ -18,6 +19,7 @@ var app = express();
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.set('view engine', 'hbs');
+// app.use('/views', express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/views'));
 
 hbs.registerHelper('getCurrentYear', () => {
@@ -37,14 +39,11 @@ app.get('/signup', (request, response) => {
 	})
 });
 
-// app.get('/signup', (request, response) => {
-// 	var users = response.end(JSON.stringify(request.body))
-// 	fs.appendFile('users.json', users, function(err){
-// 		if(err){
-// 			console.log('Unable to write to file!')
-// 		};
-// 	};
-// });
+app.post('/signup', (request, response) => {
+	todo.loadFile(accounts);
+	todo.addUser(accounts, request.body.emailAddr, request.body.password1);
+});
+
 
 app.get('/mainpage', (request, response) => {
 	response.render('mainpage.hbs', {

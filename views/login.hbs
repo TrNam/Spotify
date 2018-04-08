@@ -9,11 +9,12 @@
         
         <input id="signupButton" type="button" value="Sign up" onclick="window.location.href='/signup'"/>
         
-        <div id="login">
+        <form action="/login" method="post" id="login">
             <h1>User Login</h1>
             <input class="userInp" id="username" type="text" placeholder="Username" required>
             <input id="password" class="userInp" type="password" placeholder="Password" required>
-        </div>
+            <input id="signinButton" type="submit" value="Sign In">
+        </form>
         
         {{> footer}}
     </body>

@@ -7,18 +7,32 @@
     
     <body>
         
-        <form action="/congratulations" id="signup">
-            <br>Enter your first name: <input name="firstName" type="text" placeholder="First Name" required><br>
-            <br>Enter your last name: <input name="lastName" type="text" placeholder="Last Name" required/><br>
-            <br>Enter your email address: <input name="emailAddr" type="email" placeholder="eg. whosemans@gmail.com" required/><br>
-            <br>Enter your password: <input name="pass1" type="password" required/><br>
-            <br>Re-enter your password: <input name="pass2" type="password" required/><br>
+        <form action="/signup" id="signup" method="post">
+            <label>Enter your first name: </label><input name="firstName" type="text" placeholder="First Name" required>
+            <br>
+            <br>
+            <label>Enter your last name: </label><input name="lastName" type="text" placeholder="Last Name" required/>
+            <br>
+            <br>
+            <label>Enter your email address: </label><input name="emailAddr" type="email" placeholder="eg. whosemans@gmail.com" required/>
+            <br>
+            <br>
+            <label>Enter your password: </label><input name="password1" type="password" required/>
+            <br>
+            <br>
+            <label>Re-enter your password: </label><input name="password2" type="password" required/>
+            <br>
             <br>
             <input id="continueButton" type="submit" value="Continue"/>
             
         </form>
         
         {{> footer}}
+        
+        <script>
+            const todo = require('./todo.js');
+            
+        </script>
         
     </body>
     
