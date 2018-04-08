@@ -22,6 +22,13 @@ app.set('view engine', 'hbs');
 // app.use('/views', express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/views'));
 
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
+
+app.use(bodyParser.json());
+
+
 hbs.registerHelper('getCurrentYear', () => {
 	return new Date().getFullYear();
 })
@@ -40,8 +47,7 @@ app.get('/signup', (request, response) => {
 });
 
 app.post('/signup', (request, response) => {
-	todo.loadFile(accounts);
-	todo.addUser(accounts, request.body.emailAddr, request.body.password1);
+	console.log(request.body)
 });
 
 
@@ -62,6 +68,16 @@ app.get('/congratulations', (request, response) => {
 	response.render('congratulations.hbs', {
 		title: 'Congratulations'
 	})
+});
+
+app.post('/congratulations', (request, response) => {
+	// console.log(request.body)
+	response.render('congratulations.hbs', {
+		title: 'Congratulations'
+	})
+
+	todo.loadFile(accounts);
+    todo.addUser(accounts, request.body.emailAddr, request.body.password1);
 });
 
 app.listen(port, () => {
