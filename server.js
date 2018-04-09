@@ -5,7 +5,6 @@ const fs = require('fs');
 const port = process.env.PORT || 8080;
 const bodyParser = require('body-parser');
 const todo = require('./todo.js');
-var http = require("http");
 
 var app = express();
 
@@ -28,10 +27,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-
-app.get('/playlist', (request, response) =>{
-
-});
 
 
 hbs.registerHelper('getCurrentYear', () => {
